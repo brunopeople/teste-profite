@@ -11,6 +11,7 @@ export const Produtos = [
     {
         foto:"" ,
         titulo: "",
+        promocao: "desconto",
         precoDesconto: "",
         precoVelho:"",
         parcelas: "",
