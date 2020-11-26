@@ -10,16 +10,16 @@ import { faBars, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
     return(
         <>
-            <header className="header">
-                <ul className="header__components">
+            <header className="cabecalho">
+                <ul className="cabecalho__componentes">
                     <li className="menu"><FontAwesomeIcon icon={faBars}/></li>
-                    <li className="logo"><img src={logo} className="header__logo" alt="logo" /></li>
-                    <li className="search"><SearchBar/></li>
-                    <ul className="header__group">
-                        <li className="account"><FontAwesomeIcon icon={faUserCircle}/><span>Minha Conta</span></li>
-                        <li className="cart"><img src={cart} alt="carrinho de compras" /> <span>1</span></li>
+                    <li className="logo"><img src={logo} className="cabecalho__logo" alt="logo" /></li>
+                    <li className="barra_pesquisa"><SearchBar/></li>
+                    <ul className="cabecalho__group">
+                        <li className="conta"><FontAwesomeIcon icon={faUserCircle}/><span>Minha Conta</span></li>
+                        <li className="carrinho"><img src={carrrinho} alt="carrinho de compras" /> <span>1</span></li>
                         <li className="separator"><span></span></li>
-                        <li className="flags"><img src={flags} alt="idiomas" /></li>
+                        <li className="bandeiras"><img src={Bandeiras} alt="idiomas" /></li>
                     </ul>
                 </ul>
             </header>
