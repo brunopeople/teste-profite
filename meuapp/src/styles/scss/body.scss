@@ -1,0 +1,31 @@
+@import './index.scss';
+
+.carrousel{
+    position: relative;
+
+    &.carrousel--desktop{
+        display: block;
+
+        @include respond-below(md){
+            display: none;
+        }
+    }
+
+    &.carrousel-mobile{
+        display: block;
+
+        @include respond-above(md){
+            display: none;
+        }
+    }
+
+    &.carrousel-mobile{
+        display: block;
+
+    @include responde-above(md){
+        display: none;
+    }
+
+    
+    }
+}

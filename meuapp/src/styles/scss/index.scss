@@ -1,0 +1,15 @@
+@import './variaveis/cores.scss';
+@import './variaveis/media-queries';
+@import './variaveis/fontes.scss';
+
+/**Extensões**/
+@import './extensao/botao.scss';
+@import './extensao/botao-comprar.scss';
+@import './extensao/titulo.scss';
+
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
