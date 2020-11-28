@@ -2,7 +2,11 @@
 //  MEDIA QUERIES
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// A map of breakpoints.
+/*
+  O mapa dos breakpoints. Breakpoints são pontos de pixel da 
+  tela ou pontos de interfaces de usuário onde a tela será adaptada para 
+  a resolução de qualquer dispotisitivo mobile first. 
+*/ 
 $breakpoints: (
   xs: 576px,
   sm: 768px,

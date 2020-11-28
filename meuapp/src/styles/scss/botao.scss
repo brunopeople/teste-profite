@@ -47,11 +47,11 @@
         width: 14px;
         height: 14px;
         border-radius: 100%;
-        background: $color-4;
+        background: $azul-marinho;
         display: inline-block;
         text-align: center;
         font-size: 10px;
-        color: $white;
+        color: $branco-puro;
         line-height: 14px;
         margin-left: 4px;
       }
@@ -95,7 +95,7 @@
           height: 30px;
           width: 1px;
           display: inline-block;
-          background: $black;
+          background: $preto-puro;
           margin-left: 20px;
           margin-right: 20px;
         }
@@ -112,7 +112,7 @@
   }
 
   &__search {
-    border-bottom: 1px solid $color-2;
+    border-bottom: 1px solid $cinza-claro;
     line-height: 2;
     position: relative;
     margin: 0 auto;
@@ -147,12 +147,12 @@
 
 /* footer */
 .footer {
-  background-color: $color-5;
-  border-bottom: 10px solid $color-4;
+  background-color: $preto;
+  border-bottom: 10px solid $azul-marinho;
   padding: 25px 15px;
 
   h2 {
-    @extend %title;
+    @extend %titulo;
     padding-left: 0;
   }
 
@@ -169,7 +169,7 @@
 
     &--item {
       margin: 1em;
-      color: $white;
+      color: $branco-puro;
 
       &.company {
         text-align: center;
@@ -209,7 +209,7 @@
   }
 
   &__button {
-    @extend %common-button;
+    @extend %botao;
 
     >svg {
       padding-right: 10px;
@@ -244,8 +244,8 @@
   padding-bottom: 32px;
 
   h2 {
-    @extend %title;
-    color: $color-5;
+    @extend %titulo;
+    color: $preto;
   }
 
   &__container {
@@ -257,7 +257,7 @@
   }
 
   &__box {
-    background: $white;
+    background: $branco;
     margin: 0 auto;
     position: relative;
 
@@ -271,7 +271,7 @@
     &:hover,
     &:focus {
       @include respond-above(md) {
-        background: $color-6;
+        background: $branco;
 
         .shelf__button {
           visibility: visible;
@@ -323,20 +323,20 @@
   &__title {
     font-style: normal;
     font-weight: 500;
-    font-size: $font-size-12;
+    font-size: $tamanho-fonte;
     line-height: 14px;
     text-align: center;
-    color: $color-2;
+    color: $cinza-claro;
     display: block;
     margin-bottom: 20px;
   }
 
   &__old-price {
-    font-size: $font-size-12;
+    font-size: $tamanho-fonte;
     line-height: 14px;
     text-align: center;
     text-decoration-line: line-through;
-    color: $color-2;
+    color: $cinza-claro;
     display: block;
     margin-top: 8px;
   }
@@ -346,7 +346,7 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    color: $color-4;
+    color: $azul-marinho;
     display: block;
     margin-top: 2px;
   }
@@ -355,14 +355,14 @@
     font-size: 11px;
     line-height: 13px;
     text-align: center;
-    color: $color-2;
+    color: $cinza-claro;
     display: block;
     margin-top: 4px;
     margin-bottom: 8px;
   }
 
   &__button {
-    @extend %buy-button;
+    @extend %botao-comprar;
 
     @include respond-above(md) {
       opacity: 0;

@@ -26,6 +26,20 @@
         display: none;
     }
 
-    
+    .carrousel-seta{
+        &.seta-posterior,
+        &.seta-anterior{
+            display: none !important;
+        }
+    }
+    }
+
+    .box-banner{
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+        }
     }
 }
