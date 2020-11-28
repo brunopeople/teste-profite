@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProdutoData } from "./../../data";
+import { Produtos } from "./../../data";
 import avaliacao  from '../../imagens/rating.svg';
 import Slider from "react-slick";
 import Buttons from '../../components/Button/Button';
@@ -41,7 +41,7 @@ const Produto = () => {
           <div className="estante__container">
           <h2>Produtos</h2>
           <Slider {...configuracao}>
-            {stockData.map((data, index) => {
+            {Produtos.map((data, index) => {
               return (
                 <div key={index} className="estante__caixa">
                   <div className="estante__bandeiras">

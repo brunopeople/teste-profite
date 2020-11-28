@@ -1,9 +1,8 @@
 import React from 'react';
 import logoProfite from '../../imagens/profite-footer.svg';
 import logoVtex from '../../imagens/vtex-footer.svg';
-import {FontAwesomeIcon} from '@fontawesome/react-fontawesome'; 
-import '../../styles/scss/button.scss';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import '../../styles/scss/botao.scss';
 import {faEnvelope, faHeadset} from '@fortawesome/free-solid-svg-icons';
 
 export const Footer = () =>{

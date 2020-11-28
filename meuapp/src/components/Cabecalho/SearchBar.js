@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/scss/button.scss';
+import '../../styles/scss/botao.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
