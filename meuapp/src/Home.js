@@ -1,19 +1,37 @@
 import React from 'react';
-import Header from './components/Cabecalho/Header';
-import Footer from './components/Footer/Footer';
+import './estilo/css/App.css';
 import Banner from './components/Banner/Banner';
-import Produto from './components/Produto/Produto';
-import './styles/scss/index.scss';
+import Headers from './components/Cabecalho/Cabecalho';
+import Footer from './components/Footer/Footer';
 
-const Home = () => {
-    return(
-        <>
-            <Header />
-            <Banner />
-            <Produto />
-            <Produto />
-        </>
-    )
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      carItens: 0
+    }
+
+    this.countCar = this.countCar.bind(this);
+
+  }
+
+  countCar() {
+
+    this.setState({
+      carItens: (this.state.carItens + 1)
+    })
+
+  }
+
+  //function App() {
+  render() {
+
+    return (
+      <div className="">
+        <Headers car={this.state.carItens} />
+        <Appcontent countCar={this.countCar} />
+        <Footer />
+      </div>
+    );
+  }
 }
-
-export default Home;

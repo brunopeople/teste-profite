@@ -1,82 +1,39 @@
 import React from 'react';
-import { Produtos } from "./../../data";
-import avaliacao  from '../../imagens/rating.svg';
-import Slider from "react-slick";
-import Buttons from '../../components/Button/Button';
+import PropTypes from 'prop-types';
 
-const Produto = () => {
-    const configuracao ={
-        dots: false,
-        infinite: true,
-        speed: 700,
-        slideToShow: 4,
-        slidesToScroll: 4,
-        responsive:[
-            {
-                breakpoint: 992,
-                configuracao:{
-                    slideToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
+const Produtos = ({ catalogo, countCar}) => {
+  const { id, codigo, nome, avaliacao, preco, desconto, vendas} = catalogo;
+  
+  return(
+    <div id={`card-${index}`} className="card">
+      <div className='itens_cols'>
+        <img src={require(`../../API/imagens/${code}.png`)} alt='tenis' />
+        <p><label className='lbdesc'>{nome}</label></p>
+        <p><img src={require(`../../API/imagens/${avaliacao}.png`)} className='stars' alt='avaliacao' /></p>
+        <p style={{ 'height': '19px'}}><label className='priceIni'>{sala === 1 ? `de ${moeda(preco)}` : ''}</label></p>
+        <p><label className='parclb'>ou em 3x de ${moeda((preco - setoff) / 3)}</label></p>
+        <p><button className='btn' onClick={countCar}>COMPRAR</button></p>
+      </div>
+      {sale===1 && OFF()}
+    </div>
+  )
+}
 
-            {
-                breakpoint: 768,
-                configuracao: {
-                    slideToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            }
-            
-        ]
-    };
+function OFF(props){
+  return(
+    <div className='itens-off'>
+      <img src={require(`../../API/imagens/off.png`)} alt='off' />
+    </div>
+  );
+}
 
-    return (
-        <>
-          <div className="estante">
-          <div className="estante__container">
-          <h2>Produtos</h2>
-          <Slider {...configuracao}>
-            {Produtos.map((data, index) => {
-              return (
-                <div key={index} className="estante__caixa">
-                  <div className="estante__bandeiras">
-                    <span className="bandeiras">{data.promocao}</span>
-                  </div>
-    
-                  <span className="estante__imagem">
-                    <img src={data.foto} alt="Imagem do produto"/>
-                  </span>
-    
-                  <span className="estante__estrelas">
-                    <img src={avaliacao} alt="Avaliação"/>
-                  </span>
-    
-                  <span className="estante__titulo">
-                    {data.titulo}
-                  </span>
-                  <span className="estante__preço-velho">
-                    {data.precoVelho}
-                  </span>
-                  <span className="estante__novo-preco">
-                  {data.precoDesconto}
-                  </span>
-                  <span className="estante__parcelas">
-                    {data.parcelas}
-                  </span>
-                    <Buttons id='estante__botao' value={data.button}></Buttons>
-                </div>
-              );
-            })}
-            </Slider>
-          </div>
-          </div>
-        </>
-      )
-    }
-    
-    export default Produto;
+function moeda(valor){
+  return valor.toLocaleString('pt-br', {style: 'currency' , currency: 'BRL'});
+}
+
+Produtos.PropTypes = {
+  countCar: PropTypes.func.isRequired
+}
+
+export default Produtos;
+

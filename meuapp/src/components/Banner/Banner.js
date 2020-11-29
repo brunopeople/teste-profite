@@ -1,61 +1,85 @@
-import React from 'react';
-import Slider from  "react-slick";
-import banner from '../../imagens/Fullbanner.jpg';
+import React, {Component} from 'react';
+import Slider from '../Slider/slider';
+import Produtos from '../Produto/Produto';
 
-const Banner = () =>{
-    const configuracoes = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
+export default class Banner extends Component{
+    cosntructot(props){
+        super(props);
+        this.state = {
+            catalogo: [],
+            properties: 0,
+            property: 0
+        }
+    }
 
-    return(
-        <>
-            <section>
-                <div className="slider">
-                    <Slider {...configuracoes}>
-                        <div className="box-banner">
-                            <img
-                                width="1922"
-                                height="430"
-                                alt="banner 1"
-                                src="{banner}"
-                            />
-                        </div>
+    componentDidMount(){
+        const url = JSON.stringify(require("../../API/API.json"));
+        const API = JSON.parse(url);
+        this.setState({
+            catalogo: API.products,
+            properties: API.count
+        });
+    }
 
-                        <div className="box-banner">
-                            <img
-                                width="1920" 
-                                height="430"
-                                alt="banner 1"
-                                src="https://via.placeholder.com/1920x430/269f94?text=Banner"
-                            />
-                        </div>
 
-                        <div className="box-banner">
-                            <img 
-                                width="1920"
-                                height="430"
-                                alt="banner 2"
-                                src="https://via.placeholder.com/1920x430/269f94?text=Banner"
-                            />
-                        </div>
+    nextProperty = () => {
+        const newIndex = this.state.property + 1;
+        this.setState({
+            property: newIndex
+        })
+    }
 
-                       <div className="box-banner">
-                            <img 
-                                width="1920"
-                                height="430"
-                                alt="banner 2"
-                                src="https://via.placeholder.com/1920x430/269f94?text=Banner"
-                            />
-                        </div> 
-                    </Slider>
+    prevProperty = () =>{
+        const newIndex = this.state.property - 1;
+        this.setState({
+            property: newIndex
+        })
+    }
+
+    render(){
+        const {properties, property} = this. state;
+        return(
+            <div className='content'>
+                <div className='slideshow'>
+                    <div className="slide-imp"></div>
+                    <div className="slide-par"></div>
+                    <Slide />
                 </div>
-            </section>
-        </>
-    )
-}
 
-export default Banner;
+                <div className='itens'>
+                    <h2>Produtos</h2>
+                    <hr />
+
+                    <div className='slide-previous'>
+                        <div className='seta'>
+                            <button onClick={() => this.prevProperty()} disabled={property === 0}>
+                                <svg width="14" height="22" viewBox=" 0  0 14 22" fill="none" xmls="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M13.585 19.415L5.18833 11L13.585 2.585L11 0L0 11L11 22L13.585 19.415Z" fill="#011627" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div className='container-prod'>
+                        <div className='slider-itens'>
+                            <div className="cards-slider-wrapper" style={{ 'transform': `translateX(-${property * (110/ properties)}%)`}}>
+                                {
+                                    this.state.catalogo.map(property => <Items key={property.code} catalgo={property} countCar={this.props.countCar} />)
+                                }
+                            </div>
+                        </div>
+
+                        <div className='slide-next'>
+                            <div className='seta'>
+                            <button> onClick={() => this.nextProperty()} disabled={property === properties}>
+                                <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <path fillRule="evenodd" clipRule="evenodd" d="M-3.91006e-05 19.415L8.39663 11L-3.91006e-05 2.585L2.58496 0L13.585 11L2.58496 22L-3.91006e-05 19.415Z" fill="#011627" />
+                                </svg>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}

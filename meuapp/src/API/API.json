@@ -1,0 +1,113 @@
+{   "count": 10,
+    "Tenis" :[
+        {
+            "id": 1,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 150.00,
+            "desconto": 90,
+            "vendas": 1,
+            "código_produto": "D24-1738-304",
+            "avaliacao": 4
+        },
+
+        {
+            "id": 2,
+            "nome": "Tênis Mizuno Strike 2 N Masculino - Preto",
+            "preço": 299.90,
+            "desconto": 90,
+            "vendas": 0,
+            "código_produto": "D16-2924-006",
+            "avaliacao": 5
+        },
+
+        {
+            "id": 3,
+            "nome": "Tênis Tyron Storm Masculino - Preto - Grafite",
+            "preço": 80.00,
+            "desconto": 60,
+            "vendas": 1,
+            "código_produto": "C89-0205-180",
+            "avaliacao": 3
+        },
+
+        {
+            "id": 4,
+            "nome": "Tênis Olympus Contract Masculino - Marinho",
+            "preço": 120.00,
+            "desconto": 50,
+            "vendas": 3,
+            "código_produto": "D22-1776-012",
+            "avaliacao": 5
+        },
+
+        {
+            "id": 5,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 150.00,
+            "desconto": 90,
+            "vendas": 1,
+            "código_produto": "D24-1738-304",
+            "avaliacao": 4
+        },
+        
+        {
+            "id": 5,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 150.00,
+            "desconto": 90,
+            "vendas": 1,
+            "código_produto": "D24-1738-304",
+            "avaliacao": 4
+        },
+
+        {
+            "id": 6,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 150.00,
+            "desconto": 90,
+            "vendas": 1,
+            "código_produto": "D24-1738-304",
+            "avaliacao": 4
+        },
+
+        {
+            "id": 7,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 150.00,
+            "desconto": 90,
+            "vendas": 1,
+            "código_produto": "D24-1738-304",
+            "avaliacao": 4
+        },
+
+        {
+            "id": 8,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 150.00,
+            "desconto": 90,
+            "vendas": 1,
+            "código_produto": "D24-1738-304",
+            "avaliacao": 4
+        },
+            
+        {
+            "id": 9,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 100.00,
+            "desconto": 10,
+            "vendas": 10,
+            "código_produto": "D14-1238-304",
+            "avaliacao": 4
+        },
+
+        {
+            "id": 10,
+            "nome": "Tênis Kappa Impact Masculino - Preto - Grafite",
+            "preço": 15.00,
+            "desconto": 5,
+            "vendas": 100,
+            "código_produto": "D34-1858-404",
+            "avaliacao": 4
+        }
+    ]
+}
