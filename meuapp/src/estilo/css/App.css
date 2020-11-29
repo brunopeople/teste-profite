@@ -1,12 +1,12 @@
 @font-face {
   font-family: "font";
-  src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
+  src: url("../fontes/Ubuntu-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "fontB";
-  src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
+  src: url("../fontes/Ubuntu-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -116,7 +116,7 @@ header label:hover {
   float: left;
 }
 .search input {
-  background-image: url(../../img/lupa.png);
+  background-image: url(../../imagens/lupa.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 30px;
@@ -223,7 +223,7 @@ header label:hover {
   width: 50%;
   height: 400px;
   float: left;
-  background-image: url(../../img/slide/par.jpg);
+  background-image: url(../../imagens/slide/nex.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

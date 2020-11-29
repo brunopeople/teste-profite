@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import logo from '../../imagens/logo.png';
 import usuario from '../../imagens/user.png';
 import mercado from '../../imagens/br.png';
-import brasil from '../../imagens/br.png';
-import esp from '../../imagens/esp.png';
+import br from '../../imagens/br.png';
+import esp from '../../imagens/es.png';
 import eng from '../../imagens/en.png';
 
 const Cabecalho = ({ car }) => (
@@ -45,7 +45,7 @@ const Cabecalho = ({ car }) => (
 
             <div className='account'>
                 <div className='account-user'>
-                    <img src={user} alt='user' />
+                    <img src={usuario} alt='user' />
                 </div>
                 <div className='aacount-name'>
                     <label>Minha Conta</label>
@@ -58,7 +58,7 @@ const Cabecalho = ({ car }) => (
             </div>
 
             <div className='language'>
-                <img src={bra} alt= 'pt-br' />
+                <img src={br} alt= 'pt-br' />
                 <img src={esp} alt= 'es' />
                 <img src={eng} alt= 'en' />
             </div>

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Slider from '../Slider/slider';
+import Slider from '../Slider/slider'
 import Produtos from '../Produto/Produto';
 
 export default class Banner extends Component{
-    cosntructot(props){
+    constructor(props){
         super(props);
         this.state = {
             catalogo: [],
