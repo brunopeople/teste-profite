@@ -41,5 +41,28 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunopeople/teste-profite.git"
+  },
+  "keywords": [
+    "React",
+    "SASS",
+    "Gulp",
+    "Responsivo",
+    "e",
+    "Profite"
+  ],
+  "author": "bruno pessoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunopeople/teste-profite/issues"
+  },
+  "homepage": "https://github.com/brunopeople/teste-profite#readme"
 }
