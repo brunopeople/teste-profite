@@ -66,7 +66,7 @@ const Cabecalho = ({ car }) => (
     </header>
 );
 
-Cabecalho.PropTypes = {
+Cabecalho.propTypes = {
     car: PropTypes.number
 }
 

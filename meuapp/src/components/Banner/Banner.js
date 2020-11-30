@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Slider from '../Slider/slider'
+import React, { Component } from 'react';
+import Slide from '../Slide/Slide';
 import Produtos from '../Produto/Produto';
 
 export default class Banner extends Component{
@@ -43,7 +43,7 @@ export default class Banner extends Component{
                 <div className='slideshow'>
                     <div className="slide-imp"></div>
                     <div className="slide-par"></div>
-                    <Slide />
+                    <Banner />
                 </div>
 
                 <div className='itens'>
@@ -63,14 +63,14 @@ export default class Banner extends Component{
                         <div className='slider-itens'>
                             <div className="cards-slider-wrapper" style={{ 'transform': `translateX(-${property * (110/ properties)}%)`}}>
                                 {
-                                    this.state.catalogo.map(property => <Items key={property.code} catalgo={property} countCar={this.props.countCar} />)
+                                    this.state.catalogo.map(property => <Produtos key={property.code} catalgo={property} countCar={this.props.countCar} />)
                                 }
                             </div>
                         </div>
 
                         <div className='slide-next'>
                             <div className='seta'>
-                            <button> onClick={() => this.nextProperty()} disabled={property === properties}>
+                            <button onClick={() => this.nextProperty()} disabled={property === properties} >
                                 <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                      <path fillRule="evenodd" clipRule="evenodd" d="M-3.91006e-05 19.415L8.39663 11L-3.91006e-05 2.585L2.58496 0L13.585 11L2.58496 22L-3.91006e-05 19.415Z" fill="#011627" />
                                 </svg>
