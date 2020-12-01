@@ -1,8 +1,8 @@
 import React from 'react';
 import './estilo/css/App.css';
-import Banner from './components/Banner/Banner'
-import Headers from './components/Cabecalho/Cabecalho';
-import Footer from './components/Footer/Footer';
+import Banner from './componentes/Banner/Banner';
+import Headers from './componentes/Cabecalho/Cabecalho';
+import Footer from './componentes/Footer/Footer';
 
 export default class App extends React.Component {
   constructor() {

@@ -70,4 +70,4 @@ Cabecalho.propTypes = {
     car: PropTypes.number
 }
 
-export default Cabecalho
+export default Cabecalho;
