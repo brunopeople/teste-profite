@@ -16,10 +16,10 @@ export default class Appcontent extends Component {
   componentDidMount() {
 
     const url = JSON.stringify(require("../../JSON/produtos.json"));
-    const data = JSON.parse(url);
+    const produtos = JSON.parse(url);
     this.setState({
-      catalago: data.products,
-      properties: data.count
+      catalago: produtos.produtos,
+      properties: produtos.count
     });
 
   }
@@ -68,7 +68,7 @@ export default class Appcontent extends Component {
             <div className='slider-itens'>
               <div className="cards-slider-wrapper" style={{ 'transform': `translateX(-${property * (110 / properties)}%)` }}>
                 {
-                  this.state.catalago.map(property => <Produtos key={property.code} catalago={property} countCar={this.props.countCar} />)
+                  this.state.catalago.map(property => <Produtos key={property.codigo_produto} catalago={property} countCar={this.props.countCar} />)
                 }
               </div>
             </div>

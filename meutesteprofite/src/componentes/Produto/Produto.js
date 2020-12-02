@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Produtos = ({ catalogo, countCar}) => {
-  const { id, codigo, nome, avaliacao, preco, desconto, vendas} = catalogo;
+const Produtos = ({ catalago, countCar}) => {
+  const { id, codigo_produto, nome, avaliacao, preco, desconto, vendas} = catalago;
   
   return(
     <div id={`card-${id}`} className="card">
       <div className='itens_cols'>
-        <img src={require(`../../JSON/imgs/${codigo}`)} alt='tenis' />
+        <img src={require(`../../JSON/imgs/${codigo_produto}.png`)} alt='tenis' />
         <p><label className='lbdesc'>{nome}</label></p>
         <p><img src={require(`../../JSON/imgs/${avaliacao}`)} className='stars' alt='avaliacao' /></p>
         <p style={{ 'height': '19px'}}><label className='priceIni'>{vendas === 1 ? `de ${moeda(preco)}` : ''}</label></p>
