@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import logo from '../../imagens/logo.png';
 import usuario from '../../imagens/user.png';
-import mercado from '../../imagens/br.png';
+import mercado from '../../imagens/car.png';
 import br from '../../imagens/br.png';
 import esp from '../../imagens/es.png';
 import eng from '../../imagens/en.png';
